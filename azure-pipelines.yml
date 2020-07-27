@@ -48,13 +48,13 @@ steps:
       command: 'restore'
       projects: '**/*.csproj'
 
-  - template: pipeline-templates/build.yml
+  - template: Agent.BuildDirectory/s/pipeline-templates/build.yml
     parameters:
       buildConfiguration: 'Debug'
 
-  - template: pipeline-templates/build.yml
-    parameters:
-      buildConfiguration: 'Release'
+#   - template: pipeline-templates/build.yml
+#     parameters:
+#       buildConfiguration: 'Release'
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
