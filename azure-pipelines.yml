@@ -35,7 +35,7 @@ steps:
   - script: 'pwd; ls -a;'
     displayName: 'Printing output to console'
   
-  - script: 'mslearn-tailspin-spacegame-web/node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
+  - script: './mslearn-tailspin-spacegame-web/node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
     displayName: 'Compile Sass assets'
 
   - task: gulp@1
