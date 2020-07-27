@@ -48,7 +48,7 @@ steps:
       command: 'restore'
       projects: '**/*.csproj'
 
-  - template: build.yml@pipeline-templates
+  - template: build-template.yml@pipeline-templates
     parameters:
       buildConfiguration: 'Debug'
 
